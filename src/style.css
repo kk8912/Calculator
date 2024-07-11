@@ -1,69 +1,77 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #1b1b1b;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 
-  .h1{
-    color:blue;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    margin-left: 10px;
-    margin-bottom: 5px;
-  }
-  
-  .calculator {
-    position: relative;
-    display: grid;
-  }
-  
-  .calculator .value {
-    grid-column: span 4;
-    height: 100px;
-    text-align: right;
-    border: none;
-    outline: none;
-    padding: 10px;
-    font-size: 18px;
-  }
-  
-  .calculator span {
-    display: grid;
-    width: 60px;
-    height: 60px;
-    background: #292929;
-    place-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #fff;
-  }
-  
-  .calculator span:active {
-    background: rgb(255, 163, 26);
-    color: #fff;
-  }
-  
-  .calculator span.clear {
-    grid-column: span 2;
-    width: 120px;
-    background: rgb(255, 163, 26);
-   
-  }
-  
-  .calculator span.plus {
-    grid-row: span 2;
-    height: 120px;
-  }
-  
-  .calculator span.equal {
-    background: rgb(255, 163, 26);
-   
-  }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1b1b1b;
+}
+
+.h1 {
+  color: blue;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-left: 87px;
+  margin-bottom: 5px;
+}
+
+.calculator {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 80px); /* Adjusted width for each button */
+  gap: 10px;
+  padding: 20px;
+  background: #333;
+  border-radius: 10px;
+}
+
+.calculator .value {
+  grid-column: span 4;
+  height: 120px; /* Increased height */
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px; /* Increased font size */
+  background: #444;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.calculator span {
+  display: grid;
+  width: 80px; /* Increased width */
+  height: 80px; /* Increased height */
+  background: #292929;
+  place-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.calculator span:active {
+  background: rgb(255, 163, 26);
+  color: #fff;
+}
+
+.calculator span.clear {
+  grid-column: span 2;
+  width: 170px; /* Adjusted width */
+  background: rgb(255, 163, 26);
+}
+
+.calculator span.plus {
+  grid-row: span 2;
+  height: 170px; /* Adjusted height */
+}
+
+.calculator span.equal {
+  background: rgb(255, 163, 26);
+}

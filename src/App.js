@@ -9,8 +9,13 @@ function App() {
   }
 
   function calculate() {
-    var answers = eval(inputvalue);
-    setinputvalue(answers);
+    try {
+      var answers = eval(inputvalue);
+      setinputvalue(answers);
+    } catch (e) {
+      setinputvalue("Expression is not valid");
+      setTimeout(() => setinputvalue(""), 1500); // Clear the message after 1.5 seconds
+    }
   }
 
   function clear() {
@@ -20,9 +25,9 @@ function App() {
   return (
     <>
       <h1 className="h1">calculator</h1>
-      <form class="calculator" name="calc">
-        <input type="text" class="value" value={inputvalue} />
-        <span class="num clear" onClick={() => clear()}>
+      <form className="calculator" name="calc">
+        <input type="text" className="value" value={inputvalue} readOnly />
+        <span className="num clear" onClick={() => clear()}>
           c
         </span>
         <span onClick={() => display("/")}>/</span>
@@ -43,12 +48,11 @@ function App() {
         <span onClick={() => display("0")}>0</span>
         <span onClick={() => display("00")}>00</span>
         <span onClick={() => display(".")}>.</span>
-        <span class="num equal" onClick={() => calculate()}>
+        <span className="num equal" onClick={() => calculate()}>
           =
         </span>
       </form>
     </>
-    
   );
 }
 
