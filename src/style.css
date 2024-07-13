@@ -24,7 +24,7 @@ body {
 .calculator {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 80px); /* Adjusted width for each button */
+  grid-template-columns: repeat(4, 80px); 
   gap: 10px;
   padding: 20px;
   background: #333;
@@ -47,7 +47,7 @@ body {
 .calculator span {
   display: grid;
   width: 80px; /* Increased width */
-  height: 80px; /* Increased height */
+  height: 80px;
   background: #292929;
   place-items: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -63,13 +63,13 @@ body {
 
 .calculator span.clear {
   grid-column: span 2;
-  width: 170px; /* Adjusted width */
+  width: 170px; 
   background: rgb(255, 163, 26);
 }
 
 .calculator span.plus {
   grid-row: span 2;
-  height: 170px; /* Adjusted height */
+  height: 170px; 
 }
 
 .calculator span.equal {
