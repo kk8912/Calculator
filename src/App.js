@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./style.css";
-
 function App() {
   const [inputvalue, setinputvalue] = useState("");
 
